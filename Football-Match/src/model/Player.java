@@ -5,12 +5,12 @@ public class Player implements Movable{
 	/**
 	 * Constante que representa el ancho del personaje
 	 */
-	public final static int ANCHO = 32;
+	public final static int ANCHO = 50;
 
 	/**
 	 * Constante que representa el alto del personaje
 	 */
-	public final static int ALTO = 40;
+	public final static int ALTO = 50;
 
 	/**
 	 * Constante que representa la ruta de la imagen del personaje
@@ -50,8 +50,10 @@ public class Player implements Movable{
 	 */
 	protected String rutaImagen;
 
-	private String nickName;
+	private String number;
 	private int goals;
+	private int distanceTraveled;
+	private boolean color;
 
 	/**
 	 * @param posicionX
@@ -192,42 +194,93 @@ public class Player implements Movable{
 	@Override
 	public void moveLeft(int valor) {
 		// TODO Auto-generated method stub
-		
+		posicionX -= valor;
 	}
 
 
 	@Override
 	public void moveUp(int valor) {
 		// TODO Auto-generated method stub
-		
+		posicionY -= valor;
 	}
 
 
 	@Override
 	public void moveDown(int valor) {
 		// TODO Auto-generated method stub
-		
+		posicionY += valor;
 	}
 
 
 	@Override
 	public void move(int direccion) {
 		// TODO Auto-generated method stub
-		
+		if (direccion == 1) {
+			moveLeft(DISTANCIA_QUE_SE_MUEVE_1);
+			actualDirection(1);
+		}
+		if (direccion == 2) {
+			moveRight(DISTANCIA_QUE_SE_MUEVE_1);
+			actualDirection(2);
+		}
+		if (direccion == 3) {
+			moveUp(DISTANCIA_QUE_SE_MUEVE_1);
+			actualDirection(3);
+		}
+		if (direccion == 4) {
+			moveDown(DISTANCIA_QUE_SE_MUEVE_1);
+			actualDirection(4);
+		}
 	}
 
 
 	@Override
 	public void push() {
 		// TODO Auto-generated method stub
-		
+		if (mueveArriba) {
+			moveDown(1);
+		}
+		if (mueveAbajo) {
+			moveUp(1);
+		}
+		if (mueveDerecha) {
+			moveLeft(1);
+		}
+		if (mueveIzquierda) {
+			moveRight(1);
+		}
 	}
 
 
 	@Override
-	public void actualDirection(int direccion) {
+	public void actualDirection(int dire) {
 		// TODO Auto-generated method stub
-		
+		switch (dire) {
+		case 1:
+			setMueveIzquierda(true);
+			setMueveDerecha(false);
+			setMueveArriba(false);
+			setMueveAbajo(false);
+			break;
+		case 2:
+			setMueveDerecha(true);
+			setMueveIzquierda(false);
+			setMueveAbajo(false);
+			setMueveArriba(false);
+			break;
+		case 3:
+			setMueveArriba(true);
+			setMueveDerecha(false);
+			setMueveIzquierda(false);
+			setMueveAbajo(false);
+			break;
+		case 4:
+			setMueveAbajo(true);
+			setMueveArriba(false);
+			setMueveDerecha(false);
+			setMueveIzquierda(false);
+			break;
+		}
 	}
 
 
