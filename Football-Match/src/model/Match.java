@@ -1,5 +1,5 @@
 package model;
 
-public class Field {
+public class Match {
 
 }

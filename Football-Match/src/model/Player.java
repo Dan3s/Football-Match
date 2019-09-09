@@ -37,7 +37,7 @@ public class Player {
 	 * Atributo que representa la relación raizHabilidades con la clase Habilidades
 	 */
 
-	private int vida;
+	private String nickName;
 	private int puntos;
 
 	/**
