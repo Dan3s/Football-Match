@@ -1,5 +1,5 @@
 package controller;
 
-public class UserHandler extends Thread {
+public class UserHandler {
 
 }
