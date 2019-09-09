@@ -130,13 +130,6 @@ public class Player {
 		this.mueveDerecha = mueveDerecha;
 	}
 
-	public int getVida() {
-		return vida;
-	}
-
-	public void restarVida() {
-		vida -= 5;
-	}
 
 	/**
 	 * Nombre: moverDerecha. El metodo se encarga de aumentar la posicion del eje x
