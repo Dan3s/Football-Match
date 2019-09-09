@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Esteb
- *
- */
-module Info {
-}
