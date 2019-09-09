@@ -1,6 +1,6 @@
 package model;
 
-public class Player {
+public class Player implements Movable{
 	
 	/**
 	 * Constante que representa el ancho del personaje
@@ -15,7 +15,7 @@ public class Player {
 	/**
 	 * Constante que representa la ruta de la imagen del personaje
 	 */
-	public final static String DESTROYER = "./recursos/Imagenes/personajes/pika.gif";
+	public final static String PLAYER_IMAGE = "./resources/images/player.gif";
 
 	/**
 	 * Atributo que representa el movimiento hacia arriba del personaje
@@ -36,9 +36,22 @@ public class Player {
 	/**
 	 * Atributo que representa la relación raizHabilidades con la clase Habilidades
 	 */
+	
+	/**
+	 * Atributo que representa la posicion x de la imagen
+	 */
+	protected int posicionX;
+	/**
+	 * Atributo que representa la posicion y de la imagen
+	 */
+	protected int posicionY;
+	/**
+	 * Atributo que representa la ruta de la iamgen
+	 */
+	protected String rutaImagen;
 
 	private String nickName;
-	private int puntos;
+	private int goals;
 
 	/**
 	 * @param posicionX
@@ -46,31 +59,69 @@ public class Player {
 	 * @param rutaImagen
 	 * @param detenido
 	 */
-	public Player(int posicionX, int posicionY, String DESTROYER) {
+	public Player(int posicionX, int posicionY, String image) {
 		
 		mueveArriba = false;
 		mueveAbajo = false;
 		mueveIzquierda = false;
 		mueveDerecha = false;
-
+		this.posicionX = posicionX;
+		this.posicionY = posicionY;
+		this.rutaImagen = image;
 		
 
 		
-		puntos = 0;
+		goals = 0;
 		
+	}
+	
+	/**
+	 * @return posicionX
+	 */
+	public int getPosicionX() {
+		return posicionX;
+	}
+
+	/**
+	 * @return posicionY
+	 */
+	public int getPosicionY() {
+		return posicionY;
+	}
+
+	/**
+	 * @param posicionX
+	 */
+	public void setPosicionX(int posicionX) {
+		this.posicionX = posicionX;
+	}
+
+	/**
+	 * @param posicionY
+	 */
+	public void setPosicionY(int posicionY) {
+		this.posicionY = posicionY;
+	}
+
+	public String getRutaImagen() {
+		return rutaImagen;
+	}
+
+	public void setRutaImagen(String rutaImagen) {
+		this.rutaImagen = rutaImagen;
 	}
 
 	
 	public void sumarPuntos() {
-		puntos = puntos + 3;
+		goals = goals + 1;
 	}
 
 	public int getPuntos() {
-		return puntos;
+		return goals;
 	}
 
 	public void setPuntos(int puntos) {
-		this.puntos = puntos;
+		this.goals = puntos;
 	}
 
 	
@@ -128,6 +179,55 @@ public class Player {
 	 */
 	public void setMueveDerecha(boolean mueveDerecha) {
 		this.mueveDerecha = mueveDerecha;
+	}
+
+
+	@Override
+	public void moveRight(int valor) {
+		// TODO Auto-generated method stub
+		posicionX += valor;
+	}
+
+
+	@Override
+	public void moveLeft(int valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void moveUp(int valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void moveDown(int valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void move(int direccion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void push() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void actualDirection(int direccion) {
+		// TODO Auto-generated method stub
+		
 	}
 
 
