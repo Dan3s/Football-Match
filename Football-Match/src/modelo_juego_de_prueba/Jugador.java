@@ -1,4 +1,4 @@
-package modelo;
+package modelo_juego_de_prueba;
 
 /**
  * clase que representa al jugador de la partida 

@@ -1,11 +1,15 @@
-package test;
+package test_juego_de_prueba;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
 
-import modelo.Jugador;
-import modelo.Partida;
+
+import static org.junit.Assert.*;
+
+
+import org.junit.Test;
+
+import modelo_juego_de_prueba.Jugador;
+import modelo_juego_de_prueba.Partida;
 
 class TestPartida {
 

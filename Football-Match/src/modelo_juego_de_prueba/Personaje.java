@@ -1,4 +1,4 @@
-package modelo;
+package modelo_juego_de_prueba;
 
 /**
  * esta clase define los atributos de los personajes del juego 

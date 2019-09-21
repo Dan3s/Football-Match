@@ -1,4 +1,4 @@
-package interfaz;
+package interfaz_juego_de_prueba;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -8,9 +8,9 @@ import java.awt.event.KeyListener;
 
 import javax.swing.*;
 
-import hilos.MoverImagen;
-import modelo.Partida;
-import modelo.Personaje;
+import hilos_juego_de_prueba.MoverImagen;
+import modelo_juego_de_prueba.Partida;
+import modelo_juego_de_prueba.Personaje;
 
 public class Principal extends JFrame {
 

@@ -1,4 +1,4 @@
-package excepciones;
+package excepciones_juego_de_prueba;
 
 public class JugadorNoEncontradoException extends Exception{
 

@@ -1,4 +1,4 @@
-package interfaz;
+package interfaz_juego_de_prueba;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

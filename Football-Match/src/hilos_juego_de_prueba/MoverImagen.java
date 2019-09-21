@@ -1,9 +1,9 @@
-package hilos;
+package hilos_juego_de_prueba;
 
 import javax.swing.ImageIcon;
 
-import interfaz.Principal;
-import modelo.Personaje;
+import interfaz_juego_de_prueba.Principal;
+import modelo_juego_de_prueba.Personaje;
 
 public class MoverImagen extends Thread{
 
